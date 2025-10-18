@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Matsuyoshi{% endblock %}</title>
+  <!-- CSSを読み込み -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <img src="{{ url_for('static', filename='images/logo_matsuyoshi.png') }}" alt="Hakone Matsuyoshi">
+      </a>
+
+    <nav>
+      <a href="/about">松芳について</a>
+      <a href="/recruit">芸者募集</a>
+      <a href="/contact">ご依頼</a>
+      <a href="/faq">よくある質問</a>
+      <a href="/inquiry">お問い合わせ</a>
+    </nav>
+
+      <div class="header-right"></div>
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+</body>
+</html>

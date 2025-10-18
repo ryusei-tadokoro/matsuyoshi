@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}ホーム | Matsuyoshi{% endblock %}
+
+{% block content %}
+  <!-- トップページ専用ヒーロー画像 -->
+  <div class="hero"></div>
+
+  <section class="intro-text">
+    <h2>箱根湯本に息づく、粋と雅の舞台</h2>
+    <p>
+        古き良き日本の情緒が今も息づく箱根湯本。<br>
+        ここには、長い時を超えて守られてきた「芸」と「心」の世界があります。<br>
+        お客様の笑顔を引き出し、宴を彩るのは、<br>
+        あなたの温かな心と気品ある所作。<br>
+        舞を通して、言葉を通して、箱根の夜を美しく灯すお仕事です。<br>
+        <br>
+        <br>
+        クリック-松芳について
+    </p>
+  </section>
+
+    <!-- 募集バナー -->
+    <section class="recruit-banner">
+    <a href="/recruit">
+        <img src="{{ url_for('static', filename='images/logo_matsuyoshi_3.png') }}" 
+            alt="宴会コンパニオン・芸者募集">
+    </a>
+    </section>
+
+  <section class="work-scene">
+    <h2>私たちのお仕事の風景</h2>
+    <p>伝統と情熱が交差する芸者の日常世界</p>
+  </section>
+
+  <!-- お仕事の風景セクション の直後に追記 -->
+<section class="work-gallery">
+  <div class="work-card">
+    <a href="/greeting">
+      <img src="{{ url_for('static', filename='images/logo_matsuyoshi_4.png') }}" alt="稽古の様子">
+    </a>
+    <h3>代表からの挨拶</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+  </div>
+
+  <div class="work-card">
+    <a href="/contact">
+      <img src="{{ url_for('static', filename='images/logo_matsuyoshi_5.png') }}" alt="お座敷でのひととき">
+    </a>
+    <h3>ご依頼はこちら</h3>
+    <p>変化する世界で伝統を守り、新たな意味を見出す芸者の挑戦</p>
+  </div>
+
+  <div class="work-card">
+    <a href="/faq">
+      <img src="{{ url_for('static', filename='images/logo_matsuyoshi_6.png') }}" alt="宴席での舞">
+    </a>
+    <h3>よくある質問</h3>
+    <p>世代を超えて受け継がれる芸者の深い文化的意義</p>
+  </div>
+</section>
+
+<!-- お問い合わせバナー -->
+<section class="contact-banner">
+  <a href="/inquiry">
+    <img src="{{ url_for('static', filename='images/logo_matsuyoshi_7.png') }}" alt="お問い合わせ">
+  </a>
+</section>
+
+
+{% endblock %}
